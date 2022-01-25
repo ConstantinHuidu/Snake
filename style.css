@@ -1,0 +1,45 @@
+body {
+  background-color: rgb(224, 214, 214)
+}
+
+h1, p {
+  text-align:center;
+}
+
+#gameStatus {
+  color: red;
+  font-size: 30px;
+}
+
+#showScore {
+  color: green;
+  font-size: 30px;
+}
+
+.grid {
+  background-color: white;
+  width: 632px;
+  height: 632px;
+  border: 1px solid black;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.cell {
+  width: 30px;
+  height: 30px;
+}
+.snake {
+  background-color:  rgb(108, 160, 31);
+  border-radius: 25px;
+}
+
+.snakeCollision {
+  background-color: red;
+  border-radius: 25px;
+}
+
+.apple {
+  background-color:  violet;
+  border-radius: 25px;
+}
