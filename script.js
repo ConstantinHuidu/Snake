@@ -1,4 +1,4 @@
-let game_speed = 300;
+let game_speed = 1000;
 let score = 0;
 let foodValue = 0;
 let grid = document.querySelector(".grid");
@@ -10,20 +10,15 @@ let showScore = document.getElementById("showScore");
 showScore.hidden = true;
 showScore.innerHTML = "Score: " + score;
 
-
-function playEasy() {
-    game_speed = 300;
-    foodValue = 1;
-    document.getElementById("play-easy").disabled = true;
-    document.getElementById("play-hard").disabled = true;
-    grid.hidden = false;
-    showScore.hidden = false;
-    createBoard();
-}
-
-function playHard() {
-    game_speed = 150;
-    foodValue = 5;
+function play(btn) {
+    id = btn.id;
+    if (id == "play-easy") {
+        game_speed = 300;
+        foodValue = 1;
+    } else if (id == "play-hard") {
+        game_speed = 150;
+        foodValue = 5;
+    }
     document.getElementById("play-easy").disabled = true;
     document.getElementById("play-hard").disabled = true;
     grid.hidden = false;
